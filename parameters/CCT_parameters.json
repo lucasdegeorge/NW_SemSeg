@@ -1,0 +1,55 @@
+{
+    "model" : {
+        "pretrained" : false,
+        "freeze" : "backbone",
+        "pretraining" : "backbone",
+        "model_path" : "C:/Users/lucas.degeorge/Documents/trained_models/model_super_20230723_155619/model_super_20230723_155619_epoch180.pth",
+        "in_channels" : 1,
+        "nb_classes" : 3,
+        "nb_RNlayers" : 34,
+        "isDilation" : true,
+        "multi_grid" : [1, 2, 4],
+        "dilate_scale" : 8,
+        "upscale" : 8,
+        "DropOutDecoder" : 1, 
+        "FeatureDropDecoder" : 1, 
+        "FeatureNoiseDecoder" : 1, 
+        "VATDecoder" : 1, 
+        "CutOutDecoder" : 1, 
+        "ContextMaskingDecoder" : 1, 
+        "ObjectMaskingDecoder" : 1, 
+        "xi" : 1e-1,
+        "eps" : 10.0, 
+        "drop_rate" : 0.3, 
+        "spacial_dropout" : true,
+        "erase" : 0.4,
+        "uniform_range" : 0.3
+    }, 
+
+    "aux_decoder_order" : {
+        "DropOutDecoder" : 0, 
+        "FeatureDropDecoder" : 1, 
+        "FeatureNoiseDecoder" : 2, 
+        "VATDecoder" : 3, 
+        "CutOutDecoder" : 4, 
+        "ContextMaskingDecoder" : 5, 
+        "ObjectMaskingDecoder" : 6
+    },
+    
+    "trainer" : {
+        "sup_loss" : "DICE-CE",
+        "unsup_loss" : "mse",
+        "weight_ul_max" : 30,
+        "optimizer" : "sgd",
+        "scheduler" : "PolynomialLR",
+        "optimizer_args":{
+            "lr": 1e-2,
+            "weight_decay": 1e-4,
+            "momentum": 0.9
+        },
+        "nb_epochs" : 200
+    }, 
+
+    "batch_size" : 4,
+    "device" : "cpu"
+}

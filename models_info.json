@@ -1,0 +1,8 @@
+{   
+    "model_super_20230723_155619" : ["CCT", "super", "CCT super"],
+    "model_semi_20230719_134837" : ["CCT", "semi", "CCT semi"],
+    "model_semi_20230725_094455" : ["CCT", "semi", "CCT semi pretrained"],
+    "unet_super_20230807_081324" : ["UNet", "super", "UNet super"],
+    "unet_semi_20230807_094900" : ["UNet", "semi", "UNet semi"],
+    "unet_super_20230812_230324" : ["UNet", "super", "UNet super pseudo-label"]
+}

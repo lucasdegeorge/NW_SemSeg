@@ -1,0 +1,40 @@
+{   
+    "mode" : "super",
+    "batch_size" : 2,
+    "device" : "cpu",
+    "model" : {
+        "in_channels" : 1,
+        "nb_classes" : 3,
+        "bilinear" : true,
+        "all_perturbed" : false
+    }, 
+
+    "perturbation" : {
+        "drop_rate" : 0.3,
+        "spatial_dropout" : true,
+        "uniform_range" : 0.3
+    },
+
+    "decoders" : {
+        "dropout" : 1,
+        "feature_drop" : 1,
+        "feature_noise" : 1
+    },
+    
+    "trainer" : {
+        "sup_loss_mode" : "DICE-CE",
+        "unsup_loss_mode" : "mse",
+        "weight_ul_max" : 30,
+        "rampup_length" : 8,
+        "optimizer" : "sgd",
+        "optimizer_args":{
+            "lr": 1e-2,
+            "weight_decay": 1e-4,
+            "momentum": 0.9
+        },
+        "scheduler" : "PolynomialLR",
+        "nb_epochs" : 200,
+        "loss_printer_step" : 50,
+        "model_saver_step" : 10
+    }
+}

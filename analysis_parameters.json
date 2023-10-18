@@ -1,0 +1,25 @@
+{
+    "predict" : {
+        "save_pred" : false,
+        "display_pred" : true,
+        "save_image_with_mask" : false,
+        "display_image_with_mask" : false,
+        "save_overlaid" : false,
+        "display_overlaid" : false
+    },
+
+    "get_ellipse" : {
+        "save_with_edges" : false,
+        "display_with_edges" : false
+    }, 
+
+    "get_circle" : {
+        "save_with_edges" : false,
+        "display_with_edges" : false
+    }, 
+
+    "measurements" : {
+        "save_with_lines" : false,
+        "display_with_lines" : false
+    }
+}
