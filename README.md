@@ -8,6 +8,6 @@ Construction and comparison of different semantic segmentation models for images
 The models are inspired by the UNet and PSPNet architectures.
 We compared three different paradigms: supervised learning, semi‑supervised learning and pseudo-labelling. 
 
-Report of our work available [here](). 
+Paper of our work available [here](https://github.com/lucasdegeorge/NW_SemSeg/blob/main/report.pdf). 
 
 Under the supervision of [Federico Panciera](https://elphyse.c2n.universite-paris-saclay.fr/en/members/federico-panciera/) and Nam Hong.
